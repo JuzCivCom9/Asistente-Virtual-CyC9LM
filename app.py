@@ -42,8 +42,7 @@ elif consulta == opciones[2]:
 elif consulta == opciones[3]:
     st.markdown("Instagram: [@juzcivcom9lamatanza](https://www.instagram.com/juzcivcom9lamatanza/)")
 elif consulta == opciones[4]:
-    st.markdown("📋 [Encuesta para profesionales](https://docs.google.com/forms/d/e/1FAIpQLSelQUyg_3rns4lk5lEhupU311yxPwfZDXspvreS-GwYnxrSWw/viewform)  
-📋 [Encuesta general](https://docs.google.com/forms/d/e/1FAIpQLSd3ILJSn6i2F-WXT85Ap_-3WWSyYZ6ULjqFFKgt0fc0dmqxiQ/viewform)")
+    st.markdown("📋 [Encuesta para profesionales](https://docs.google.com/forms/d/e/1FAIpQLSelQUyg_3rns4lk5lEhupU311yxPwfZDXspvreS-GwYnxrSWw/viewform)  \n📋 [Encuesta general](https://docs.google.com/forms/d/e/1FAIpQLSd3ILJSn6i2F-WXT85Ap_-3WWSyYZ6ULjqFFKgt0fc0dmqxiQ/viewform)")
 elif consulta == opciones[5]:
     st.markdown("🔗 [Ingresar a SADyP (Zoom - lun a vie de 9 a 13 hs)](https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09)")
 

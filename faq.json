@@ -1,0 +1,86 @@
+[
+  {
+    "pregunta": "¿Dónde funciona el Juzgado Civil y Comercial N° 9?",
+    "respuesta": "Funciona en Avenida Comisionado Indart 2147/57, San Justo, Provincia de Buenos Aires"
+  },
+  {
+    "pregunta": "¿Cuál es el horario de atención?",
+    "respuesta": "El horario es de lunes a viernes de 8:00 a 14:00 hs."
+  },
+  {
+    "pregunta": "¿Cómo puedo consultar el estado de un expediente?",
+    "respuesta": "Puede consultar el estado del expediente a través de la Mesa de Entradas Virtual provista por SCBA"
+  },
+  {
+    "pregunta": "¿Cómo consulto los saldos de una cuenta judicial?",
+    "respuesta": "A través del Portal de Presentaciones y Notificaciones Electrónicas, ingresando a la sección de sus causas y utilizando el botón que indica 'ver cuentas bancarias'."
+  },
+  {
+    "pregunta": "¿Dónde se puede consultar información sobre las subastas judiciales?",
+    "respuesta": "Toda la información se encuentra en: https://www.scba.gov.ar/paginas.asp?id=50473"
+  },
+  {
+    "pregunta": "¿Dónde se puede consultar el valor actual del IUS?",
+    "respuesta": "Puede consultarse en nuestro Instagram o en: https://www.scba.gov.ar/paginas.asp?id=41320"
+  },
+  {
+    "pregunta": "¿Dónde se puede obtener información para abonar la Tasa de Justicia?",
+    "respuesta": "Se encuentra en el instructivo elaborado por la SCBA: https://www.scba.gov.ar/paginas.asp?id=46791"
+  },
+  {
+    "pregunta": "¿Cómo buscar un domicilio electrónico?",
+    "respuesta": "Acceda al sitio de SCBA: https://www.scba.gov.ar/paginas.asp?id=46690"
+  },
+  {
+    "pregunta": "¿Dónde se obtienen los códigos de materias para iniciar un expediente?",
+    "respuesta": "Puede consultarlos en: https://www.scba.gov.ar/paginas.asp?id=41329"
+  },
+  {
+    "pregunta": "¿Qué requisitos debe tener un Oficio Ley 22.172?",
+    "respuesta": "1) Nombre del Juez: Dr. Rodrigo C. Suárez Della Porta. 2) Secretaria: Dra. María Daniela Marino. 3) Dirección: Av. Comisionado Indart 2147/57. 4) Competencia del Juzgado. 5) Auto ordenatorio. 6) Finalidad del oficio."
+  },
+  {
+    "pregunta": "¿Cómo debe confeccionarse una cédula?",
+    "respuesta": "Debe ser clara, precisa, e indicar lo que se ordena notificar textualmente. También debe especificar juzgado, carátula, destinatario y domicilio."
+  },
+  {
+    "pregunta": "¿Qué documentación debe presentarse para iniciar una sucesión?",
+    "respuesta": "1) Partida de defunción. 2) Partidas que acrediten el vínculo. 3) Último domicilio del causante. 4) Bienes del acervo. 5) Datos de herederos."
+  },
+  {
+    "pregunta": "¿Puedo consultar expedientes en formato papel?",
+    "respuesta": "No. El Juzgado está 100% digitalizado y se consulta de forma virtual."
+  },
+  {
+    "pregunta": "¿Se exige informe de cesión e inhibición del Registro de la Propiedad Inmueble para automotores?",
+    "respuesta": "No. Solo debe adjuntar informe del Registro de la Propiedad Automotor."
+  },
+  {
+    "pregunta": "¿Qué valuación fiscal aceptan para vehículos automotores municipalizados?",
+    "respuesta": "Se acepta la valuación fiscal usada para tributos, 3 publicaciones de vehículos similares o revistas especializadas."
+  },
+  {
+    "pregunta": "¿Puedo realizar peticiones o aclaraciones de escritos por mail?",
+    "respuesta": "No. Solo mediante presentación electrónica. Las peticiones por mail no son consideradas."
+  },
+  {
+    "pregunta": "Envié un instrumento a confronte, ¿cómo sé si fue librado?",
+    "respuesta": "Desde el Portal de Presentaciones Electrónicas. Si es observado, se notifica por ese medio. Si es librado, queda constancia en el expediente."
+  },
+  {
+    "pregunta": "Tengo fijada audiencia virtual pero no me llegó el enlace por correo",
+    "respuesta": "El link está en la providencia que fija la audiencia. No se envía por mail. Consulte la MEV."
+  },
+  {
+    "pregunta": "Necesito consultar sobre un expediente, ¿cómo procedo?",
+    "respuesta": "Puede hacerlo presencialmente en Mesa de Entradas o mediante SADyP por Zoom de lunes a viernes de 9 a 13 hs."
+  },
+  {
+    "pregunta": "¿Debo consentir una transferencia judicial de dinero?",
+    "respuesta": "Sí, excepto en: 1) sumas dadas en pago, 2) honorarios firmes, 3) acervo hereditario con inscripción firme."
+  },
+  {
+    "pregunta": "¿Puedo hacer el trámite de nacionalización/ciudadanía en este Juzgado?",
+    "respuesta": "No. Debe hacerlo ante un Juzgado con competencia federal. Más información en: https://www.pjn.gov.ar/guia"
+  }
+]

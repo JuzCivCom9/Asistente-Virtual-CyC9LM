@@ -1,0 +1,54 @@
+[
+  {
+    "pregunta": "¿Dónde funciona el Juzgado Civil y Comercial N° 9?",
+    "respuesta": "Funciona en Avenida Comisionado Indart 2147/57, San Justo, Provincia de Buenos Aires"
+  },
+  {
+    "pregunta": "¿Cuál es el horario de atención?",
+    "respuesta": "El horario es de lunes a viernes de 8:00 a 14:00 hs."
+  },
+  {
+    "pregunta": "¿Cómo puedo consultar el estado de un expediente?",
+    "respuesta": "Puede consultar el estado del expediente a través de la Mesa de Entradas Virtual provista por SCBA"
+  },
+  {
+    "pregunta": "¿Cómo consulto los saldos de una cuenta judicial?",
+    "respuesta": "A través del Portal de Presentaciones y Notificaciones Electrónicas, ingresando a la sección de sus causas y utilizando el botón que indica “ver cuentas bancarias”, tiene acceso al saldo de la misma."
+  },
+  {
+    "pregunta": "¿Dónde se puede consultar información sobre las subastas judiciales?",
+    "respuesta": "Las Subastas Judiciales se realizan actualmente de manera electrónica. Toda la información se encuentra en el sitio de la SCBA: https://www.scba.gov.ar/paginas.asp?id=50473"
+  },
+  {
+    "pregunta": "¿Dónde se puede consultar el valor actual del IUS?",
+    "respuesta": "En nuestro Instagram publicamos cada actualización, pero también puede consultarse en el sitio oficial de la SCBA: https://www.scba.gov.ar/paginas.asp?id=41320"
+  },
+  {
+    "pregunta": "¿Dónde se puede obtener información para abonar la Tasa de Justicia?",
+    "respuesta": "En el instructivo elaborado por la SCBA en: https://www.scba.gov.ar/paginas.asp?id=46791"
+  },
+  {
+    "pregunta": "¿Cómo buscar un domicilio electrónico?",
+    "respuesta": "Accediendo al siguiente enlace de la SCBA: https://www.scba.gov.ar/paginas.asp?id=46690"
+  },
+  {
+    "pregunta": "¿Dónde se obtienen los códigos de materias para iniciar un expediente?",
+    "respuesta": "En el siguiente enlace: https://www.scba.gov.ar/paginas.asp?id=41329"
+  },
+  {
+    "pregunta": "¿Qué requisitos debe tener un Oficio Ley 22.172?",
+    "respuesta": "1) Nombre del Juez: Dr. Rodrigo C. Suárez Della Porta\\n2) Nombre de la Secretaria: Dra. María Daniela Marino\\n3) Dirección del Juzgado: Avda. Comisionado Indart 2147/57\\n4) Competencia del Juzgado\\n5) Transcripción del auto ordenatorio\\n6) Finalidad del oficio"
+  },
+  {
+    "pregunta": "¿Cómo debe confeccionarse una cédula?",
+    "respuesta": "Debe ser clara, precisa, e indicar lo que se ordena notificar textualmente. También debe especificarse el juzgado, carátula y datos del destinatario, incluyendo el domicilio electrónico o postal correspondiente."
+  },
+  {
+    "pregunta": "¿Qué documentación debe presentarse para iniciar una sucesión?",
+    "respuesta": "1) Partida de defunción\\n2) Partida/s que acrediten el vínculo (matrimonio, nacimiento, etc.)\\n3) Ultimo domicilio del causante\\n4) Bienes que integran el acervo hereditario\\n5) Datos de los herederos"
+  },
+  {
+    "pregunta": "¿Puedo consultar expedientes en formato papel?",
+    "respuesta": "No. Este es un Juzgado Digitalizado. El 100% de los expedientes pueden ser consultados de forma virtual."
+  }
+]

@@ -42,25 +42,35 @@ elif consulta == opciones[2]:
 elif consulta == opciones[3]:
     st.markdown("Instagram: [@juzcivcom9lamatanza](https://www.instagram.com/juzcivcom9lamatanza/)")
 elif consulta == opciones[4]:
-    st.markdown("📋 [Encuesta para profesionales](https://docs.google.com/forms/d/e/1FAIpQLSelQUyg_3rns4lk5lEhupU311yxPwfZDXspvreS-GwYnxrSWw/viewform)  \n📋 [Encuesta general](https://docs.google.com/forms/d/e/1FAIpQLSd3ILJSn6i2F-WXT85Ap_-3WWSyYZ6ULjqFFKgt0fc0dmqxiQ/viewform)")
+    st.markdown("📋 [Encuesta para profesionales](https://docs.google.com/forms/d/e/1FAIpQLSelQUyg_3rns4lk5lEhupU311yxPwfZDXspvreS-GwYnxrSWw/viewform)  
+📋 [Encuesta general](https://docs.google.com/forms/d/e/1FAIpQLSd3ILJSn6i2F-WXT85Ap_-3WWSyYZ6ULjqFFKgt0fc0dmqxiQ/viewform)")
 elif consulta == opciones[5]:
     st.markdown("🔗 [Ingresar a SADyP (Zoom - lun a vie de 9 a 13 hs)](https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09)")
 
 # Carga de preguntas frecuentes
-st.subheader("🔎 Consulta libre:")
+st.subheader("📋 Preguntas frecuentes:")
+
 with open("data/faq.json", "r", encoding="utf-8") as f:
     faqs = json.load(f)
 
-pregunta_usuario = st.text_input("Escriba su consulta:")
+preguntas_texto = [faq["pregunta"] for faq in faqs]
+pregunta_elegida = st.selectbox("También puede seleccionar una pregunta frecuente:", [""] + preguntas_texto)
+
+if pregunta_elegida:
+    respuesta = next((faq["respuesta"] for faq in faqs if faq["pregunta"] == pregunta_elegida), None)
+    if respuesta:
+        st.success(f"**{pregunta_elegida}**\n\n{respuesta}")
+
+# Consulta libre
+st.subheader("🔎 Consulta libre:")
+pregunta_usuario = st.text_input("Escriba su consulta libre:")
 
 if pregunta_usuario:
-    preguntas = [faq["pregunta"] for faq in faqs]
-    mejor_match = difflib.get_close_matches(pregunta_usuario, preguntas, n=1, cutoff=0.4)
+    mejor_match = difflib.get_close_matches(pregunta_usuario, preguntas_texto, n=1, cutoff=0.4)
     if mejor_match:
-        for faq in faqs:
-            if faq["pregunta"] == mejor_match[0]:
-                st.success(f"**{faq['pregunta']}**\n\n{faq['respuesta']}")
-                break
+        respuesta = next((faq["respuesta"] for faq in faqs if faq["pregunta"] == mejor_match[0]), None)
+        if respuesta:
+            st.success(f"**{mejor_match[0]}**\n\n{respuesta}")
     else:
         st.warning("No encontramos coincidencias. Podés usar SADyP para una consulta personalizada.")
         st.markdown("🔗 [Ingresar a SADyP (Zoom)](https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09)")

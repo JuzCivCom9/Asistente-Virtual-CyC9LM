@@ -1,16 +1,16 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 from pathlib import Path
 import json
 
-# ── Configuración de página ──────────────────────────────────────────────────
+# ?? Configuración de página ??????????????????????????????????????????????????
 st.set_page_config(
-    page_title="Asistente Virtual IA – Juzgado Civil y Comercial N° 9",
-    page_icon="⚖️",
+    page_title="Asistente Virtual IA ? Juzgado Civil y Comercial N° 9",
+    page_icon="??",
     layout="centered",
 )
 
-# ── Estilos visuales ─────────────────────────────────────────────────────────
+# ?? Estilos visuales ?????????????????????????????????????????????????????????
 st.markdown("""
 <style>
     .stChatMessage { border-radius: 12px; }
@@ -31,22 +31,22 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ── Logo y encabezado ─────────────────────────────────────────────────────────
+# ?? Logo y encabezado ?????????????????????????????????????????????????????????
 logo_path = Path("assets/logo-juzgado9.png")
 if logo_path.exists():
     st.image(str(logo_path), width=110)
 
 st.markdown("<h2 style='color:#1A237E; margin-bottom:0;'>Asistente Virtual IA</h2>", unsafe_allow_html=True)
-st.markdown("**Juzgado Civil y Comercial N° 9 – Departamento Judicial La Matanza**")
+st.markdown("**Juzgado Civil y Comercial N° 9 ? Departamento Judicial La Matanza**")
 
 st.markdown("""
 <div class="disclaimer">
-⚠️ <strong>Aviso importante:</strong> Este servicio orienta sobre trámites y consultas frecuentes del juzgado.
+?? <strong>Aviso importante:</strong> Este servicio orienta sobre trámites y consultas frecuentes del juzgado.
 No constituye asesoramiento jurídico ni es una vía de contacto procesal válida.
 </div>
 """, unsafe_allow_html=True)
 
-# ── Cargar FAQ como contexto ──────────────────────────────────────────────────
+# ?? Cargar FAQ como contexto ??????????????????????????????????????????????????
 @st.cache_data
 def cargar_faq():
     faq_path = Path("data/faq.json")
@@ -60,7 +60,7 @@ faq_texto = "\n".join(
     f"P: {item['pregunta']}\nR: {item['respuesta']}" for item in faqs
 )
 
-# ── System prompt ─────────────────────────────────────────────────────────────
+# ?? System prompt ?????????????????????????????????????????????????????????????
 SYSTEM_PROMPT = f"""Sos el asistente virtual oficial del Juzgado Civil y Comercial N° 9 del Departamento Judicial La Matanza, Provincia de Buenos Aires, Argentina.
 Tu función es responder consultas sobre trámites, procedimientos y servicios del juzgado de manera clara, amable y precisa.
 
@@ -70,7 +70,7 @@ INFORMACIÓN DEL JUZGADO:
 - Dirección: Av. Comisionado Indart 2147/57, San Justo, Buenos Aires
 - Horario: Lunes a viernes de 8:00 a 14:00 hs
 - Instagram: @juzcivcom9lamatanza
-- SADyP (atención por Zoom): lunes a viernes de 9 a 13 hs → https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09
+- SADyP (atención por Zoom): lunes a viernes de 9 a 13 hs ? https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09
 
 SERVICIOS DISPONIBLES:
 - Declaratoria de herederos (instructivo): https://scbagovar-my.sharepoint.com/:b:/g/personal/rcsdellaporta_scba_gov_ar/EajRyx2zlyJPiYR8jb1h2sABvpMp61o4XFOe1PO8jE3XTw?e=PA4Wcxv
@@ -97,31 +97,24 @@ INSTRUCCIONES:
 7. Al final de cada respuesta que involucre un trámite complejo, ofrecé la opción de contactar por SADyP.
 """
 
-# ── Configurar Gemini ─────────────────────────────────────────────────────────
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-modelo = genai.GenerativeModel(
-    model_name="gemini-2.0-flash-lite",
-    system_instruction=SYSTEM_PROMPT,
-)
-
-# ── Inicializar historial de chat ─────────────────────────────────────────────
+# ?? Inicializar historial de chat ?????????????????????????????????????????????
 if "messages" not in st.session_state:
     st.session_state.messages = []
     st.session_state.messages.append({
         "role": "assistant",
-        "content": "¡Hola! Soy el asistente virtual del **Juzgado Civil y Comercial N° 9 – La Matanza**. ¿En qué puedo ayudarte hoy? Podés preguntarme sobre expedientes, sucesiones, audiencias, trámites y más.",
+        "content": "¡Hola! Soy el asistente virtual del **Juzgado Civil y Comercial N° 9 ? La Matanza**. ¿En qué puedo ayudarte hoy? Podés preguntarme sobre expedientes, sucesiones, audiencias, trámites y más.",
     })
 
-# ── Botones de consulta rápida ────────────────────────────────────────────────
-st.markdown('<p class="quick-btn-label">📌 Consultas frecuentes:</p>', unsafe_allow_html=True)
+# ?? Botones de consulta rápida ????????????????????????????????????????????????
+st.markdown('<p class="quick-btn-label">?? Consultas frecuentes:</p>', unsafe_allow_html=True)
 
 consultas_rapidas = [
-    "📋 Iniciar una sucesión",
-    "🔍 Estado de expediente",
-    "📅 Horarios y contacto",
-    "⚖️ Audiencia virtual",
-    "💰 Tasa de Justicia",
-    "📞 Hablar con SADyP",
+    "?? Iniciar una sucesión",
+    "?? Estado de expediente",
+    "?? Horarios y contacto",
+    "?? Audiencia virtual",
+    "?? Tasa de Justicia",
+    "?? Hablar con SADyP",
 ]
 
 cols = st.columns(3)
@@ -132,37 +125,43 @@ for i, consulta in enumerate(consultas_rapidas):
 
 st.divider()
 
-# ── Mostrar historial del chat ────────────────────────────────────────────────
+# ?? Mostrar historial del chat ????????????????????????????????????????????????
 for msg in st.session_state.messages:
-    with st.chat_message(msg["role"], avatar="⚖️" if msg["role"] == "assistant" else "👤"):
+    with st.chat_message(msg["role"], avatar="??" if msg["role"] == "assistant" else "??"):
         st.markdown(msg["content"])
 
-# ── Input del usuario ─────────────────────────────────────────────────────────
+# ?? Input del usuario ?????????????????????????????????????????????????????????
 if prompt := st.chat_input("Escribí tu consulta..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user", avatar="👤"):
+    with st.chat_message("user", avatar="??"):
         st.markdown(prompt)
 
-# ── Llamada a Gemini ──────────────────────────────────────────────────────────
+# ?? Llamada a Gemini (nuevo SDK google-genai) ?????????????????????????????????
 ultimo_mensaje = st.session_state.messages[-1] if st.session_state.messages else None
 
 if ultimo_mensaje and ultimo_mensaje["role"] == "user":
-    with st.chat_message("assistant", avatar="⚖️"):
+    with st.chat_message("assistant", avatar="??"):
         with st.spinner("Consultando..."):
             try:
-                # Armar historial en formato Gemini (roles: user / model)
-                historial_gemini = []
-                for m in st.session_state.messages[1:-1]:  # excluye bienvenida y último mensaje
-                    rol = "user" if m["role"] == "user" else "model"
-                    historial_gemini.append({"role": rol, "parts": [m["content"]]})
+                client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
-                chat = modelo.start_chat(history=historial_gemini)
-                response = chat.send_message(ultimo_mensaje["content"])
+                # Armar historial completo como texto para el modelo
+                historial_texto = ""
+                for m in st.session_state.messages[1:]:  # excluye mensaje de bienvenida
+                    rol = "Usuario" if m["role"] == "user" else "Asistente"
+                    historial_texto += f"{rol}: {m['content']}\n"
+
+                prompt_completo = f"{SYSTEM_PROMPT}\n\nCONVERSACIÓN:\n{historial_texto}\nAsistente:"
+
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=prompt_completo,
+                )
                 respuesta = response.text
 
             except Exception as e:
                 respuesta = (
-                    f"⚠️ Ocurrió un error al procesar tu consulta. "
+                    f"?? Ocurrió un error al procesar tu consulta. "
                     f"Por favor intentá nuevamente o contactanos por "
                     f"[SADyP (Zoom)](https://us05web.zoom.us/j/4715183830?pwd=KzZlVUtjWnZlYlJyWmx2ZGFKTHdmZz09).\n\n"
                     f"*Error técnico: {str(e)}*"
@@ -171,20 +170,19 @@ if ultimo_mensaje and ultimo_mensaje["role"] == "user":
         st.markdown(respuesta)
         st.session_state.messages.append({"role": "assistant", "content": respuesta})
 
-# ── Botón para limpiar conversación ──────────────────────────────────────────
+# ?? Botón para limpiar conversación ??????????????????????????????????????????
 if len(st.session_state.messages) > 1:
-    if st.button("🗑️ Nueva consulta", help="Reiniciar la conversación"):
+    if st.button("??? Nueva consulta", help="Reiniciar la conversación"):
         st.session_state.messages = [{
             "role": "assistant",
-            "content": "¡Hola! Soy el asistente virtual del **Juzgado Civil y Comercial N° 9 – La Matanza**. ¿En qué puedo ayudarte hoy?",
+            "content": "¡Hola! Soy el asistente virtual del **Juzgado Civil y Comercial N° 9 ? La Matanza**. ¿En qué puedo ayudarte hoy?",
         }]
         st.rerun()
 
-# ── Footer ────────────────────────────────────────────────────────────────────
+# ?? Footer ????????????????????????????????????????????????????????????????????
 st.markdown("---")
 st.markdown(
-    "<small>Asistente desarrollado por el Juzgado Civil y Comercial N° 9 – Depto. Judicial La Matanza. "
+    "<small>Asistente desarrollado por el Juzgado Civil y Comercial N° 9 ? Depto. Judicial La Matanza. "
     "[@juzcivcom9lamatanza](https://www.instagram.com/juzcivcom9lamatanza/)</small>",
     unsafe_allow_html=True,
 )
-
